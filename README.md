@@ -2,7 +2,7 @@
 
 This repo contains the code for our paper [Patch-Level Training for Large Language Models](https://arxiv.org/pdf/2407.12665).
 
-Patch-level training is an efficient training approach for large language models (LLMs), in which models read training data in patches and learn to predict the next patch. Following this, a small amount of training data is used to adjust the model to the token-level. This approach can achieve a even lower loss in comparison with training from scratch, while reducing training costs by half.
+Patch-level training is an efficient training approach for large language models (LLMs), in which models read training data in patches and learn to predict the next patch. Following this, a small amount of training data is used to adjust the model to the token-level. This approach can achieve an even lower loss in comparison with training from scratch, while reducing training costs by half.
 
 ## Usage
 
