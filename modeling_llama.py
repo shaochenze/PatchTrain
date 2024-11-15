@@ -1057,10 +1057,10 @@ class LlamaForCausalLM(LlamaPreTrainedModel):
 
         shift_logits = logits[..., :-1, :].reshape(-1, self.config.vocab_size)
         shift_labels = labels[..., self.patch_size:].reshape(-1, self.patch_size)
-        loss_fct = CrossEntropyLoss()
         loss = 0
+        log_probs = F.log_softmax(shift_logits, dim=1)
         for i in range(self.patch_size):
-            loss = loss + loss_fct(shift_logits, shift_labels[:, i])
+            loss = loss + F.nll_loss(log_probs, shift_labels[:, i])
         loss = loss / self.patch_size
 
         if not return_dict:
