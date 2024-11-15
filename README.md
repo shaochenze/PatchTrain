@@ -19,10 +19,10 @@ The implementation of patch-level training is quite straightforward, with only 1
 ```python
 1058    shift_logits = logits[..., :-1, :].reshape(-1, self.config.vocab_size)
 1059    shift_labels = labels[..., self.patch_size:].reshape(-1, self.patch_size)
-1060    loss_fct = CrossEntropyLoss()
-1061    loss = 0
+1060    loss = 0
+1061    log_probs = F.log_softmax(shift_logits, dim=1)
 1062    for i in range(self.patch_size):
-1063        loss = loss + loss_fct(shift_logits, shift_labels[:, i])
+1063        loss = loss + F.nll_loss(log_probs, shift_labels[:, i])
 1064    loss = loss / self.patch_size
 ```
 
