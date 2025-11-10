@@ -1,4 +1,4 @@
-# Patch-Level Training for Large Language Models
+# Patch-Level Training for Large Language Models (ICLR Spotlight)
 
 This repo contains the code for our paper [Patch-Level Training for Large Language Models](https://arxiv.org/pdf/2407.12665).
 
