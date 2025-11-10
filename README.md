@@ -1,6 +1,6 @@
-# Patch-Level Training for Large Language Models (ICLR 2025 Spotlight)
+# Beyond Next Token Prediction: Patch-Level Training for Large Language Models (ICLR 2025 Spotlight)
 
-This repo contains the code for our paper [Patch-Level Training for Large Language Models](https://arxiv.org/pdf/2407.12665).
+This repo contains the code for our paper [Beyond Next Token Prediction: Patch-Level Training for Large Language Models](https://arxiv.org/pdf/2407.12665).
 
 Patch-level training is an efficient training approach for large language models (LLMs), in which models read training data in patches and learn to predict the next patch. Following this, a small amount of training data is used to adjust the model to the token-level. This approach can achieve an even lower loss in comparison with training from scratch, while reducing training costs by half.
 
@@ -58,10 +58,11 @@ Below are the loss curves obtained from our training on the Pile dataset (360B t
 ## Citation
 If you find the resources in this repository useful, please cite as:
 ```
-@article{shao2024patch,
-  title={Patch-Level Training for Large Language Models},
-  author={Shao, Chenze and Meng, Fandong and Zhou, Jie},
-  journal={arXiv preprint arXiv:2407.12665},
-  year={2024}
+@inproceedings{shao2025beyond,
+title={Beyond Next Token Prediction: Patch-Level Training for Large Language Models},
+author={Chenze Shao and Fandong Meng and Jie Zhou},
+booktitle={The Thirteenth International Conference on Learning Representations},
+year={2025},
+url={https://openreview.net/forum?id=dDpB23VbVa}
 }
 ```
